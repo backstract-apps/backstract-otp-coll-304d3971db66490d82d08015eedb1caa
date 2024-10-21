@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: backstract-otp-coll-304d3971db66490d82d08015eedb1caa-srv
+spec:
+  selector:
+    app: backstract-otp-coll-304d3971db66490d82d08015eedb1caa
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9012
+  type: LoadBalancer

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backstract-otp-coll-304d3971db66490d82d08015eedb1caa-depl
+  labels:
+    app: backstract-otp-coll-304d3971db66490d82d08015eedb1caa
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backstract-otp-coll-304d3971db66490d82d08015eedb1caa
+  template:
+    metadata:
+      labels:
+        app: backstract-otp-coll-304d3971db66490d82d08015eedb1caa
+    spec:
+      containers:
+        - name: backstract-otp-coll-304d3971db66490d82d08015eedb1caa
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:backstract-otp-coll-304d3971db66490d82d08015eedb1caa
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9012
